@@ -1,0 +1,40 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+閒聊
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/chitchatting.css') }}" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+{% endblock %}
+
+{% block Content %}
+<div style='margin-top:10px'></div>
+<div id='bikeArea'>
+	<table class='biketable'>
+		<tr>
+			<th>主題</th>
+			<th >討論時間</th>
+			<th>內容</th>
+
+		</tr>
+		{% for row in result %}
+		<tr>
+			<td  style='word-wrap: break-word;' width='300'>
+			<td td  style='word-wrap: break-word;' width='100'>{{row.5}}</td>
+			<td>{{row.2}}</td>
+
+		</tr>
+		{% endfor %}
+	</table>
+
+
+</div>
+
+<div style='clear:both;height:50px'></div>
+<div style='margin-left:45%;'> {{ pagination.links }}</div>
+
+
+{% endblock %}
