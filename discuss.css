@@ -1,0 +1,78 @@
+#bikeArea {
+    width: 100%;
+}
+
+.biketable {
+    width: 90%;
+    border: 1px solid #000; /* 实心线边框 */
+    border-spacing: 1px; /* 单元格之间的间隔 */
+    margin: 0 auto; /* 水平居中表格 */
+}
+
+th {
+    background: #fff;
+    color: #000;
+    padding: 16px 0; /* 上下填充 */
+    text-align: center; /* 文本居中对齐 */
+    border: 2px solid #000; /* 边框 */
+    font-size: 40px; /* 字体大小 */
+    line-height: 1.6; /* 行高 */
+}
+
+tr {
+    line-height: 40px; /* 行高 */
+    text-align: center; /* 文本居中对齐 */
+    border: 2px solid #000; /* 行边框 */
+}
+
+td {
+    border: 2px solid #000; /* 单元格边框 */
+    padding: 10px; /* 单元格内填充 */
+    text-align: center; /* 文本居中对齐 */
+}
+
+
+
+
+/* 小屏幕設備調整 */
+@media (max-width: 768px) {
+    .biketable {
+        width: 100%; /* 在小设备上宽度调整为100% */
+        font-size: 20px;
+    }
+    th {
+        font-size: 20px; /* 进一步减小字体大小 */
+        padding: 5px; /* 减少填充 */
+    }
+    td {
+        font-size: 15px; /* 进一步减小字体大小 */
+        padding: 5px; /* 减少填充 */
+    }
+}
+
+/* 中等屏幕設備調整 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .biketable {
+        width: 100%; /* 在小设备上宽度调整为100% */
+    }
+    th{
+        font-size: 20px; /* 进一步减小字体大小 */
+        padding: 5px; /* 减少填充 */
+    }
+    td {
+        font-size: 15px; /* 进一步减小字体大小 */
+        padding: 5px; /* 减少填充 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
