@@ -1,0 +1,49 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+Contact Me
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/contact.css') }}" >
+{% endblock %}
+
+
+{% block Content %}
+
+<div style="margin-top:50px"></div>
+
+<div id="message">
+
+	<p class='text_' class="subject">寶貴的意見</p>
+
+	<form class="contact_form" action="/opinion" method="post">
+
+		<div class="form-group">
+			<label >標題</label>
+			<input type="text" name="title" class="form-control" required />
+		</div>
+
+		<div class="form-group">
+			<label>暱稱</label>
+			<input type="text" name="name" class="form-control" required />
+		</div>
+
+
+		<div class="form-group" style="display: flex; align-items: center;">
+            <label for="content_1">内容</label>
+            <textarea id="content_1" name="content" rows="5" colums='5' class="form-control" required></textarea>
+        </div>
+
+		<div class="form-group">
+			<button type="submit" style="width:150px;height:50px;margin-left: 42%;" class="btn_submit">提供意見</button>
+
+		</div>
+
+
+	</form>
+
+</div>
+
+{% endblock %}
+
