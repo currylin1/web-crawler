@@ -1,0 +1,96 @@
+#newsArea{
+	margin-top:50px;  /*  距離外部上面50像素  */
+	width:110%;
+	height: 100%
+
+}
+
+.newslist{
+	float:left;
+
+	width: 22%;
+	height: 100%;
+	margin: 1em;
+}
+
+.newslist img{
+	width: 80%;
+	border-radius: 5%;
+	height:400px;
+}
+
+.newslist p{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#form_{
+	text-align: center;
+	font-size:50px;
+}
+
+#page {
+    margin-left:45%;
+
+}
+
+input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+/* 小屏幕設備調整 */
+@media (max-width: 768px) {
+    .newslist {
+        width: 40%; /* 設定為 48% 以在小屏幕上實現兩列顯示 */
+        margin: 1em; /* 調整邊距以確保一致性和美觀 */
+        margin-left: 90px; /* 在中等屏幕上向右移动 */
+    }
+
+    .newslist img {
+        width: 40%; /* 確保圖片在小屏幕上也能完全填滿 .newslist 容器 */
+        height: auto; /* 使圖片高度自適應 */
+        max-height: 200px; /* 在小屏幕上調整最大高度 */
+    }
+
+    #form_ {
+        font-size: 30px; /* 在小屏幕上減小字體大小 */
+    }
+
+    input[type="submit"] {
+        padding: 8px 16px; /* 在小屏幕上適當減少按鈕的大小 */
+    }
+    #page {
+    width: 40%;
+    }
+}
+
+/* 中等屏幕設備調整 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .newslist {
+        width: 40%; /* 在平板等中型裝置上兩列顯示 */
+        margin: 1em; /* 調整邊距以確保一致性和美觀 */
+        margin-left: 90px; /* 在中等屏幕上向右移动 */
+    }
+
+    #form_ {
+        font-size: 30px; /* 適中的字體大小 */
+
+    }
+    #page {
+    width: 40%;
+
+    }
+
+
+
+
+
+}
