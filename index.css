@@ -1,0 +1,128 @@
+/* 全局基本樣式 */
+body, html {
+    margin: 0;
+    width: 100%;
+}
+
+#banner {
+    height: 0px;
+    width: 100%; /* 使橫幅寬度隨容器變化 */
+}
+
+#menu {
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+}
+
+#menu ul {
+    margin: 0 auto;
+    line-height: 80px;
+    width: 80%; /* 使用百分比來調整寬度 */
+    padding: 0; /* 清除內邊距 */
+    display: flex; /* 採用彈性盒模型 */
+    justify-content: space-around; /* 均勻分布菜單項目 */
+    flex-wrap: wrap; /* 允許菜單項目換行 */
+}
+
+#menu li {
+    list-style: none;
+    padding: 10px; /* 調整內邊距 */
+}
+
+#menu a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px; /* 調整字體大小 */
+    font-weight: bold;
+}
+
+#footer {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+#content {
+    min-height: 400px;
+    width: 100%;
+}
+
+#header_photo {
+    width: 100%;
+    clear: both;
+}
+
+.head {
+    background-color: #000;
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+#footer img {
+    width: 100%;
+    clear: both;
+}
+
+/* 媒體查詢：針對平板和手機進行調整 */
+@media (max-width: 768px) {
+    #menu ul {
+        width: 100%;
+    }
+
+    #menu li {
+        float: none;
+        display: block; /* 讓每個項目都是塊級元素 */
+        text-align: center; /* 文本居中顯示 */
+        padding: 5px; /* 減少內邊距 */
+    }
+
+    #menu a {
+        font-size: 15px; /* 在小屏幕上進一步減小字體大小 */
+    }
+
+    #menu {
+        height: auto; /* 高度自動調整 */
+    }
+    .head {
+        font-size: 16px; /* 在小屏幕上減小字體大小 */
+        padding-top: 5px; /* 輕微增加上邊距 */
+        padding-bottom: 100%; /* 減少下邊距 */
+        width: 110%
+    }
+    .head video {
+        max-width: 100%; /* 在小屏幕上允许影片宽度达到 100% */
+    }
+    #footer img {
+    width: 110%;
+    }
+    #header_photo {
+    width: 110%;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    #menu ul {
+        width: 80%;
+    }
+
+    #menu a {
+        font-size: 18px; /* 輕微調整字體大小 */
+    }
+        .head {
+        font-size: 24px; /* 在大屏幕上增大字體大小 */
+        padding-top: 15px; /* 更多上邊距 */
+        padding-bottom: 100%; /* 更多下邊距 */
+        width: 110%
+    }
+    .head video {
+        max-width: 800px; /* 在大屏幕上影片最大寬度限制为 800px */
+    }
+    #footer img {
+    width: 110%;
+    }
+    #header_photo {
+    width: 110%;
+    }
+}
