@@ -1,0 +1,58 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+賞圖區
+{% endblock %}
+
+{% block css%}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/photo.css') }}" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+{% endblock %}
+
+{% block Content %}
+<div id="newsArea">
+	<form id='form_' action='' method="get">
+		賞圖名稱：<input type="text" name='p' />
+
+
+		<input type="submit" value="尋圖" />
+	</form>
+
+
+
+
+
+
+	{% for row  in result %}
+
+		<div class="newslist">
+
+
+			<a href="{{row.1}}" target="_blank">
+				{% if row.1|length > 40 or row.1==None %}
+					<img src="{{row.1}}" >
+
+				{% else %}
+
+					<img src="static/images/default.jpg" >
+				{% endif %}
+			</a>
+			<p>{{row.0}}</p>
+			<p>{{row.5}}</p>
+		</div>
+
+
+	{% endfor %}
+
+
+
+
+</div>
+</div>
+<div style='clear:both;height:50px'></div>
+<div  id="page"> {{ pagination.links }}</div>
+{% endblock %}
+
+
+
+
