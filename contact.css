@@ -1,0 +1,107 @@
+#message{
+margin-left:32%;
+margin-bottom:100%;
+
+}
+
+.contact_form{
+
+	border:1px solid #ccc;
+	border-radius:4px;
+	padding:0.5em 0.6em;
+	line-height: 1.15;
+	width:800px;
+	margin-bottom: 200px;
+	margin-left: ;
+}
+
+.form-group{
+
+	border:1px solid #fff;
+	border-radius:4px;
+	padding:0.5em 0.6em;
+	line-height: 2px;
+	width:400px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	margin-left:20%;
+	align-items: center;
+
+}
+
+button{border:0;
+background-color:#003C9D;
+color:#fff;border-radius:10px;
+}
+.text_{
+
+	color: #003C9D; /*文字顏色*/
+	font-family: Arial, sans-serif; /*文字風格字型*/
+	font-size: 50px; /*文字大小*/
+	margin-left:15% ;
+}
+
+.form-control{
+	font-size: 20px;
+	margin-left:10%;
+}
+
+
+.form-group {
+    display: flex;
+    align-items: center;  /* 垂直居中所有子元素 */
+    flex-wrap: wrap;  /* 允许子元素在必要时换行 */
+    margin-bottom: 10px;  /* 添加一些间距 */
+}
+
+.form-group label {
+    margin-right: 10px;  /* 为标签右侧添加一些间距 */
+    width: auto;  /* 自动宽度，根据内容调整 */
+}
+
+.form-control {
+    flex-grow: 1;  /* 允许输入框填充剩余空间 */
+}
+
+#content_1 {
+    width:0%;
+
+
+}
+
+
+
+
+
+
+/* 小屏幕設備調整 */
+@media (max-width: 768px) {
+    .contact_form{
+        width:70%;
+    }
+    .form-group{
+        width:50%;
+
+    }
+
+    .form-group input,textarea {
+        width:50%;
+    }
+
+}
+
+/* 中等屏幕設備調整 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact_form{
+        width:70%;
+    }
+    .form-group{
+    width:50%;
+    }
+    .form-group input,textarea{
+    width:60%;
+    }
+}
+
+
