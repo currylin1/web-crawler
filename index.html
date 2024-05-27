@@ -1,0 +1,38 @@
+{% extends 'Base.html' %}
+
+{% block title %}
+頁首
+{% endblock %}
+
+
+
+{% block css %}
+<div>
+	<img id='header_photo' src="static/images/header-4c277.jpg">
+</div>
+{% endblock %}
+
+{% block Content %}
+<div class='head'>
+
+
+	{% for row  in he %}
+
+		<!-- <img style='margin-top:1px;' src="{{row}}"> -->
+		<video width="1280" height="720" controls>
+			<source src="{{row}}" type="video/mp4">
+				{{row}}
+		</video>
+
+		<p></p>
+
+	{% endfor %}
+
+
+</div>
+{% endblock %}
+
+
+
+
+
