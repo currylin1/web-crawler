@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		{% block title %}
+		{% endblock %}
+
+	</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}" />
+	{% block css%}
+	{% endblock %}
+
+	{% block js %}
+	{% endblock %}
+</head>
+<body>
+	<div id='banner'>
+
+	</div>
+
+	<div id='menu' style='text-align: center'>
+		<ul>
+			<li style='text-align: center'><a href='/'>首頁</a></li>
+			<li style='text-align: center'><a href='/photo'>賞圖區</a></li>
+			<li style='text-align: center'><a href='/discuss'>討論</a></li>
+			<li style='text-align: center'><a href='/intelligence'>情報</a></li>
+			<li style='text-align: center'><a href='/chitchatting'>閒聊</a></li>
+			<li style='text-align: center'><a href='/contact'>建議</a></li>
+		</ul>
+	</div>
+
+	<div id='content'>
+			<div style="clear:both;margin-top:2px;">
+			</div>
+		{% block Content %}
+
+		{% endblock %}
+	</div>
+
+	<div id='footer'>
+		<img id='header_photo' src="static/images/header-4c277.jpg">
+
+	</div>
+
+</body>
+</html>
